@@ -1,0 +1,42 @@
+#Armando Contrereas 5/8/2026
+#ps8p4
+def PayRate(JobCode):
+
+    if JobCode == "L":
+        rate = 25
+    elif JobCode == "A":
+        rate = 30
+    elif JobCode == "J":
+        rate = 50
+    else:
+        rate = 0
+
+    return rate
+
+
+TotalGrossPay = 0
+answer = "yes"
+
+while answer.lower() == "yes":
+
+# Input
+    lname = input("Enter employee last name: ")
+    JobCode = input("Enter job code (L, A, J): ").upper()
+    HRSWorked = float(input("Enter hours worked: "))
+    rate = PayRate(JobCode)
+
+# Process
+    if HRSWorked > 40:
+        OTHRS = HRSWorked - 40
+        GPay = (40 * rate) + (OTHRS * rate * 1.5)
+    else:
+        GPay = HRSWorked * rate
+        
+    TotalGrossPay = TotalGrossPay + GPay
+
+# Output
+    print("\nLast Name: ", lname)
+    print("Gross Pay: $", format(GPay, ".2f"))
+    answer = input("\nDo you want to continue? (Yes or No): ")
+
+print("\nTotal Gross Pay: $", format(TotalGrossPay, ".2f"))
