@@ -1,0 +1,27 @@
+#Armando Contrereas 5/8/2026
+#ps8p3
+def MPGFormula(Miles, Gal):
+    MPG = Miles / Gal
+    return MPG
+
+TripsMade = 0
+answer = "yes"
+
+while answer.lower() == "yes":
+
+# Input
+    DestCity = input("Enter destination city: ")
+    Miles = float(input("Enter miles travelled: "))
+    Gal = float(input("Enter gallons used: "))
+
+# Process
+    MPG = MPGFormula(Miles, Gal)
+    TripsMade = TripsMade + 1
+
+# Output
+    print("\nDestination City:", DestCity)
+    print("Miles Travelled:", Miles)
+    print("Miles Per Gallon:", format(MPG, ".2f"))
+    answer = input("\nDo you want to continue? (Yes or No): ")
+    
+print("\nTotal Number of Trips:", TripsMade)
