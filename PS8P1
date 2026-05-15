@@ -1,0 +1,29 @@
+#Armando Contrereas 5/8/2026
+#ps8p1
+def TotalFormula(quantity, price):
+    total = quantity * price
+    
+    if total > 100000:
+        total = total * 0.90
+    return total
+    
+ExtPrice = 0
+answer = "yes"
+while answer.lower() == "yes":
+
+# Input
+    quantity = float(input("Enter quantity: "))
+    price = float(input("Enter price: "))
+
+# Process
+    total = TotalFormula(quantity, price)
+
+    ExtPrice = ExtPrice + total
+
+# Output
+    print("\nQuantity: ", quantity)
+    print("Price:$ ", format(price, ".2f"))
+    print("Total:$ ", format(total, ".2f"))
+    answer = input("\nDo you want to continue? (Yes OR No): ")
+    
+print("\nExtended Price: $", format(ExtPrice, ".2f"))
