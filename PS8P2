@@ -1,1 +1,27 @@
+#Armando Contrereas 5/8/2026
+#ps8p2
+def AvgFormula(hits, at_bats):
+    BatAvg = Hits / AtBats
+    return BatAvg
+
+PLYCount = 0
+answer = "yes"
+
+while answer.lower() == "yes":
+
+# Input
+    lname = input("Enter player's last name: ")
+    Hits = int(input("Enter number of hits: "))
+    AtBats = int(input("Enter number of at bats: "))
+
+# Process
+    BatAvg = AvgFormula(Hits, AtBats)
+    PLYCount = PLYCount + 1
+
+# Output
+    print("\nLast Name: ", lname)
+    print("Batting Average: ", format(BatAvg, ".3f"))
+    answer = input("\nDo you want to continue? (Yes or No): ")
+
+print("\nTotal Number of Players: ",  PLYCount)
 
