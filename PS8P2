@@ -1,6 +1,6 @@
 #Armando Contrereas 5/8/2026
 #ps8p2
-def AvgFormula(hits, at_bats):
+def AvgFormula(Hits, AtBbats):
     BatAvg = Hits / AtBats
     return BatAvg
 
@@ -12,7 +12,7 @@ while answer.lower() == "yes":
 # Input
     lname = input("Enter player's last name: ")
     Hits = int(input("Enter number of hits: "))
-    AtBats = int(input("Enter number of at bats: "))
+    AtBats = int(input("Enter number of at bats:  "))
 
 # Process
     BatAvg = AvgFormula(Hits, AtBats)
@@ -24,4 +24,3 @@ while answer.lower() == "yes":
     answer = input("\nDo you want to continue? (Yes or No): ")
 
 print("\nTotal Number of Players: ",  PLYCount)
-
