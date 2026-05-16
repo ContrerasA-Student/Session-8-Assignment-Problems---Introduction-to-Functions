@@ -10,9 +10,9 @@ answer = "yes"
 while answer.lower() == "yes":
 
 # Input
-    DestCity = input("Enter destination city: ")
-    Miles = float(input("Enter miles travelled: "))
-    Gal = float(input("Enter gallons used: "))
+    DestCity = input("Enter Destination City: ")
+    Miles = float(input("Enter Miles Travelled: "))
+    Gal = float(input("Enter Gallons Used: "))
 
 # Process
     MPG = MPGFormula(Miles, Gal)
@@ -23,5 +23,5 @@ while answer.lower() == "yes":
     print("Miles Travelled:", Miles)
     print("Miles Per Gallon:", format(MPG, ".2f"))
     answer = input("\nDo you want to continue? (Yes or No): ")
-    
+
 print("\nTotal Number of Trips:", TripsMade)
